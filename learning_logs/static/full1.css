@@ -1,5 +1,5 @@
 .full {
-	{% load static %}
+	{% load staticfiles %}
     background: url('{% static "back2.jpg" %}') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
