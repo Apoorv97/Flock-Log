@@ -1,6 +1,6 @@
 .full {
-	{% load staticfiles %}
-    background: url('{% static "back2.jpg" %}') no-repeat center center fixed;
+	
+    background: url('https://flock-log.herokuapp.com/static/back2.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
