@@ -1,28 +1,28 @@
 
 
+
 {% extends "learning_logs/base.html" %}
 
 
+{% block header %}
+
+	<div class='jumbotron'>
+		{% load static %}
+		<link href="{% static "jum1.css" %}" rel="stylesheet">
+		<h1>Track your learning.</h1>
+	</div>
+{% endblock header %}
+
 {% block content %}
-<div class="container-fluid bgcolor">
-		  <div class="row content">
-			  <div class="col-xs-6 col-xs-offset-4 ">
-				  {% load static %}
-				  <img src="{% static "text.png" %}" class="img-responsive">
-			  </div>
-		  </div>
-		  <div class="row">
-			  <div class="col-xs-1 col-xs-offset-5 ">
-				  {% load static %}
-				  <img src="{% static "click.png" %}" class="img-responsive">
-			  </div>
-			  <div class="col-xs-1 clickpart ">
-				  <a href="https://flock-log.herokuapp.com/topics" target="_blank">
-					  {% load static %}
-					  <img src="{% static "topics.png" %}" class="img-responsive"></a>
-			  </div>
-		  </div>
-	  </div>
+	<h2>
+		<a href="{% url 'users:register' %}">Register an account</a> to make
+			your own Learning Log, and list the topics you're learning about.
+	</h2>
+	<h2>
+		Whenever you learn something new about a topic, make an entry
+		summarizing what you've learned.
+	</h2>
+
 {% endblock content %}
 
 

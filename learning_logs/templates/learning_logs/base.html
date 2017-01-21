@@ -9,8 +9,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		{% load static %}
-		<link href="{% static "full1.css" %}" rel="stylesheet">
 		
 		<title>Learning Log</title>
 
@@ -20,18 +18,13 @@
 	</head>
 	
 	<body>
-		{% load static %}
-		<link href="{% static "body1.css" %}" rel="stylesheet">
 		
 		<!--Static navbar-->
 		
 	<nav class="navbar navbar-default navbar-static-top">
-		{% load static %}
-		<link href="{% static "nav_bar.css" %}" rel="stylesheet">
+
 		
 			<div class="container">
-				{% load static %}
-				<link href="{% static "div1.css" %}" rel="stylesheet">
 
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed"
@@ -48,7 +41,10 @@
 
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="{% url 'learning_logs:topics' %}">Topics</a></li>
+					<li><a href="{% url 'learning_logs:topics' %}">
+						{% load static %}
+						<img src="{% static "topics.png" %}" alt="topics"/>
+					</a></li>
 				</ul>
 				
 				<ul class="nav navbar-nav navbar-right">
